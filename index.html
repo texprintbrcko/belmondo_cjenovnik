@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="bs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1d1919" />
+  <title>Belmondo | Cjenovnik</title>
+  <meta name="description" content="Belmondo cjenovnik" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231d1919'/%3E%3Cpath d='M17 45V17h15c10 0 16 5 16 13 0 5-3 9-8 11l9 4H36l-8-5v5H17zm11-13h4c4 0 6-1 6-4s-2-4-6-4h-4v8z' fill='%23d6a74d'/%3E%3C/svg%3E" />
+  <style>
+    :root{--ink:#1d1919;--gold:#d6a74d;--paper:#f7f3eb;--muted:#716b63;--line:#ded5c6}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);font-family:Arial,Helvetica,sans-serif;color:var(--ink)}header{background:var(--ink);color:white;padding:28px 20px 22px;text-align:center;position:sticky;top:0;z-index:5;box-shadow:0 2px 12px #0004}.brand{width:min(258px,72vw);display:block;margin:auto}.rule{height:1px;background:var(--gold);width:90px;margin:16px auto 12px}.title{font-size:.78rem;letter-spacing:.23em;text-transform:uppercase;color:#e8d7b4;margin:0}nav{display:flex;gap:7px;overflow:auto;padding:13px 14px 11px;background:#272222;white-space:nowrap}nav a{color:#f4e7ce;text-decoration:none;padding:8px 11px;border:1px solid #594c39;border-radius:999px;font-size:.8rem}.wrap{max-width:730px;margin:auto;padding:30px 18px 58px}.intro{text-align:center;margin:0 0 28px;color:var(--muted);font-size:.95rem;line-height:1.5}.section{margin:0 0 36px;scroll-margin-top:150px}.section h2{font-family:Georgia,serif;font-size:1.75rem;font-weight:400;margin:0 0 15px;color:#3b2a18;display:flex;align-items:center;gap:12px}.section h2:after{content:'';height:1px;flex:1;background:var(--gold)}.card{background:#fffdf9;border:1px solid var(--line);border-radius:10px;padding:4px 16px;box-shadow:0 2px 8px #3b2a180a}.item{display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid #eee8dd}.item:last-child{border:0}.name{font-size:1rem}.size{font-size:.84rem;color:var(--muted);min-width:42px;text-align:right}.price{font-weight:700;color:#5f3e14;white-space:nowrap;min-width:67px;text-align:right}.note{font-size:.82rem;color:var(--muted);padding:7px 0 4px;line-height:1.35}footer{text-align:center;background:var(--ink);color:#f4e7ce;padding:28px 20px;font-size:.85rem}footer span{color:var(--gold)}@media (max-width:430px){.wrap{padding:24px 12px 45px}.card{padding:4px 13px}.item{gap:8px}.name{font-size:.94rem}.price{min-width:60px}.section h2{font-size:1.5rem}}
+  </style>
+</head>
+<body>
+  <header><img class="brand" src="logo.png" alt="Belmondo" /><div class="rule"></div><p class="title">Cjenovnik</p></header>
+  <nav id="nav"></nav>
+  <main class="wrap"><p class="intro">Sve cijene su izražene u konvertibilnim markama (KM).</p><div id="menu"></div></main>
+  <footer>Belmondo <span>✦</span> Dobro došli</footer>
+  <script>
+  const menu=[
+  ['Topli napici',[['Espresso','', '2.50'],['Bezkofeinska kafa','', '3.00'],['Macchiato','', '2.50'],['Ristretto','', '2.50'],['Cappuccino','', '3.50'],['Americano','', '2.50'],['Latte macchiato','', '3.50'],['Nescafé','', '3.50'],['Čaj','', '2.50'],['Dodatak sojinog mlijeka','', '0.50']]],
+  ['Hladno cijeđeni sokovi',[['Narandža','', '4.00'],['Limunada','', '3.50'],['Jabuka','', '3.00'],['Ananas','', '6.00'],['Grejpfrut','', '4.00'],['Zdravi mix','', '5.00']]],
+  ['Bezalkoholna pića',[['Coca Cola','0.25l','3.50'],['Coca Cola Zero','0.25l','3.50'],['Coca Cola Limeta','0.33l','4.00'],['Cockta','0.25l','3.50'],['Fanta','0.25l','3.50'],['Sprite','0.25l','3.50'],['Schweppes','0.25l','3.50'],['Bitter Lemon','0.25l','3.50'],['Schweppes Tonic','0.25l','3.50'],['Schweppes Pink Grapefruit','0.25l','4.00'],['Orangina','0.25l','3.00'],['Sola ledeni čaj','0.33l','3.50'],['Sola multivitamin','0.33l','3.50'],['Vivia voda','','2.50'],['Vivia voda sa limunom','','2.50'],['Mineralna voda','','2.50'],['Exotic kruška/narandža','','3.00'],['Exotic dunja','','3.00'],['Exotic limeta','','3.00'],['Exotic limun/grejp','','3.00']],'Cedevita: narandža, jabuka, jagoda, breskva, ribizla, borovnica ili limun'],
+  ['Pivo u boci',[['Tuborg','0.33l','3.50'],['Carlsberg','0.33l','3.50'],['Budwieser','0.33l','4.00'],['Heineken','0.33l','4.00'],['Corona','0.35l','6.00'],['Blanc','0.33l','4.00']]],
+  ['Točeno pivo',[['Tuborg','M','3.00'],['Tuborg','V','4.00'],['Budwieser','M','3.50'],['Budwieser','V','4.50'],['Blanc','M','3.50'],['Blanc','V','4.50']]],
+  ['Rakije',[['Viljamovka','','3.50'],['Dunja','','3.50'],['Kajsija','','3.50'],['Šljivovica','','3.50'],['Sokolova šljivovica','','4.00'],['Sokolova viljamovka','','4.00'],['Sokolova dunja','','4.00'],['Sokolova kajsija','','4.00'],['Šljiva Barik','','5.00'],['Medovača','','3.00'],['Baba Višnja','','3.00']]],
+  ['Vina',[['Tamjanika','0.187l','6.00'],['Graševina Tikveš','','30.00'],['Tamjanika','','35.00'],['Tamjanika Luda Mara','','40.00'],['Žuti Cvet Aleksić','','45.00'],['Legat 1903 Muškat Petit Grain','0.75l','50.00'],['Kovačević Chardonnay','','60.00'],['Harizma Aleksandrović','','60.00'],['Bele vode belo vino','','120.00'],['Vranac Classic','0.75l','30.00'],['Cabernet Sauvignon','0.75l','40.00'],['Vladika','','50.00'],['Reget Reserve Aleksandrović','','80.00']]],
+  ['Žestoka pića',[['Jägermeister','','3.50'],['Tequila','','3.00'],['Chilly Tequila','','3.50'],['Yellow Tequila','','3.50'],['Pelinkovac','','3.00'],['Pelinkovac Antique','','3.50'],['Gorki list','','3.00'],['Stock','','3.00']]],
+  ['Viski',[['Jack Daniel\'s','','4.50'],['Gentleman Jack','','6.00'],['Jack Daniel\'s Apple','','4.50'],['Jameson','','4.00'],['Johnnie Walker','','4.00'],['Johnnie Walker Black','','5.50'],['Chivas Regal','','5.50'],['Chivas 18 YO','0.70l','350.00']]],
+  ['Gin',[['Beefeater','','3.50'],['Gordon\'s','','3.50'],['Sax','','3.50'],['Gin Mare','0.70l','150.00'],['Hendrick\'s','0.70l','150.00']]],
+  ['Vodka',[['Smirnoff','','3.50'],['Absolut','','3.50'],['Belvedere','','6.50'],['Belvedere','0.375l','100.00'],['Blevedere','0.7l','170.00'],['Belvedere','1.75l','400.00'],['Belvedere','3.00l','670.00']]],
+  ['Energetska pića',[['Red Bull','','6.00'],['Red Bull Zero','','6.00']]],
+  ['Kokteli',[['Aperitivo','','8.00'],['Hugo','','8.00'],['Limoncello Spritz','','9.00'],['Pornstar Martini','','10.00'],['Mojito','','8.00'],['Blue Lagoon','','8.00'],['Tropical Margarita','','9.00'],['Ruby Sour','','8.00'],['Cherry Blossom Fizz','','8.00'],['Sex on the Beach','','8.00'],['Bezalkoholni Moktail','','9.00'],['Peach and Ginger Collins','','10.00']]]];
+  const slug=s=>s.normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+  const nav=document.querySelector('#nav'),root=document.querySelector('#menu');
+  menu.forEach(([title,items,note])=>{const id=slug(title);nav.insertAdjacentHTML('beforeend',`<a href="#${id}">${title}</a>`);root.insertAdjacentHTML('beforeend',`<section class="section" id="${id}"><h2>${title}</h2><div class="card">${items.map(([n,s,p])=>`<div class="item"><span class="name">${n}</span><span class="size">${s}</span><span class="price">${p} KM</span></div>`).join('')}${note?`<p class="note">${note}</p>`:''}</div></section>`)});
+  </script>
+</body>
+</html>
